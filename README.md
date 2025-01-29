@@ -1,16 +1,16 @@
 
-# curl an API with tekton
-1. create tasks and pipeline to curl an URL
+##curl an API with tekton
+##1. create tasks and pipeline to curl an URL
 
 $ oc apply -f tasks/curl-task.yaml
 
 $ oc apply -f pipelines/curl-pipeline.yaml
 
-2. Run the pipeline and set THE_URL parameter with API url :
+##2. Run the pipeline and set THE_URL parameter with API url :
 
 $ tkn pipeline start --use-param-defaults  curl-pipeline -p THE_URL=https://api.my-ip.io/v2/ip.json
 
-3. Find the name of the pipeline run
+##3. Find the name of the pipeline run
 
 $ tkn pr list
 $ tkn pr list
@@ -23,7 +23,7 @@ curl-pipeline-run-lt9rb           23 minutes ago   8s         Succeeded
 curl-weather-pipeline-run-ckffk   1 hour ago       32s        Succeeded
 
 
-4. View the logs of the pipeline :
+##4. View the logs of the pipeline :
 
 $ tkn pr logs curl-pipeline-run-m2llc
 
