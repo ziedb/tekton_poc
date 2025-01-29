@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: curl-pipeline
+spec:
+  params:
+    - name: THE_URL
+      type: string
+      default: wttr.in/London
+  tasks:
+    - name: run-curl-task
+      taskRef:
+        name: curl-task
+        kind: Task
+      params:
+        - name: URL
+          value: $(params.THE_URL)

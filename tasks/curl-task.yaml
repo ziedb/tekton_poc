@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: curl-task
+spec:
+  params:
+    - name: URL
+      description: the URL to curl
+      type: string
+  steps:
+    - name: curl-url
+      image: curlimages/curl:latest
+      script: |
+        curl $(params.URL) 
