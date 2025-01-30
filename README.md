@@ -1,4 +1,4 @@
-#sh 📦 
+# 📦 
 # Using tekton pipeline on OpenShift
 
 ## 🚀 
