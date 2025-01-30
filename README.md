@@ -1,6 +1,6 @@
-# 📦 cUsing tekton pipeline on OpenShift
+# 📦 csing tekton pipeline on OpenShift
 
-## 🚀 UCalling an API 
+## 🚀 UCalling an API
 
 ### 1. create tasks and pipeline to curl an URL
 
