@@ -29,7 +29,7 @@ curl-pipeline-run-m2llc           12 seconds ago   6s         Succeeded
 ### 4. View the logs of the pipeline :
 
 ```bash
-$ tkn pr logs curl-pipeline-run-m2llci
+$ tkn pr logs curl-pipeline-run-m2llc
 
 [run-curl-task : curl-url]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 
