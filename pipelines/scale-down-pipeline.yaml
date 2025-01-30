@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: scale-down-pipeline
+spec:
+  params:
+    - name: APP_NAME
+      type: string
+      description: The application name
+      default: hello-world
+  tasks:
+    - name: scale-down-task
+      taskRef:
+        name: openshift-client
+        kind: ClusterTask
+      params:
+        - name: SCRIPT
+          value: |
+            oc scale deployment/$(params.APP_NAME) --replicas=0 
